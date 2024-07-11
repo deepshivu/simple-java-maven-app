@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
+                chmod 777 my-app-1.0-SNAPSHOT.jar
             }
         }
         stage('Test') {
