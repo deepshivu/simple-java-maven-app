@@ -4,6 +4,10 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
+                sh 'ls -l target'
+                // Set permissions to the JAR file
+                sh 'chmod 777 target/my-app-1.0-SNAPSHOT.jar'
+                sh 'ls -l target'
                
                 
             }
