@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        JAR_FILE = ''  // Initialize an environment var to store the JAR file name
+        JAR_FILE = ''  // Initialize an environment variable to store the JAR file name
     }
     stages {
         stage('Build') {
